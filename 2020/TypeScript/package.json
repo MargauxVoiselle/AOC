@@ -1,0 +1,26 @@
+{
+    "name": "aoc-2020",
+    "version": "1.0.0",
+    "module": "node16",
+    "description": "TypeScript for Advent of Code 2020",
+    "main": "day1.ts",
+    "scripts": {
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "day1": "ts-node ./day1.ts",
+        "day2": "ts-node ./day2.ts"
+    },
+    "devDependencies": {
+        "@types/terminal-kit": "^2.5.0",
+        "@typescript-eslint/eslint-plugin": "^5.43.0",
+        "@typescript-eslint/parser": "^5.43.0",
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "prettier": "^2.7.1",
+        "ts-node": "^10.9.1",
+        "typescript": "^4.9.3"
+    },
+    "author": "margaux",
+    "license": "ENSMN"
+}

@@ -1,0 +1,26 @@
+{
+    "name": "aoc-2020",
+    "version": "1.0.0",
+    "description": "JavaScript for Advent of Code 2020",
+    "main": "day1.js",
+    "type": "module",
+    "scripts": {
+        "format:check": "prettier --check .",
+        "format:write": "prettier --write .",
+        "day1": "node day1.js",
+        "day2": "node day2.js",
+        "day3": "node day3.js",
+        "day4": "node day4.js",
+        "day5": "node day5.js",
+        "day6": "node day6.js",
+        "day7": "node day7.js",
+        "day8": "node day8.js"
+    },
+    "devDependencies": {
+        "eslint": "^8.27.0",
+        "eslint-config-prettier": "^8.5.0",
+        "prettier": "^2.7.1"
+    },
+    "author": "margaux",
+    "license": "ENSMN"
+}
