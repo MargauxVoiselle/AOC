@@ -1,14 +1,14 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
 const search = (toSearch, input) => {
-    for (var list of input) {
+    for (let list of input) {
         if (list[1].filter((color) => toSearch.includes(color)).length > 0 && !toSearch.includes(list[0])) {
             toSearch.push(list[0]);
         }
@@ -28,7 +28,7 @@ const partOne = (input) => {
             return [rule[0], []];
         }
     });
-    var result = ['shiny gold'];
+    let result = ['shiny gold'];
     while (result.length != search(result, input).length) {
         result = search(result, input);
     }

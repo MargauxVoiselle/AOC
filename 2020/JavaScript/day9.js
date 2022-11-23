@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 
 const timer = (script, input, sizePreamble) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input, sizePreamble);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
@@ -12,8 +12,8 @@ const isSum = (number, data) => {
 };
 
 const partOne = (input, sizePreamble) => {
-    var preamble = Array.from({ length: sizePreamble }, (_v, i) => input[i]);
-    var i = sizePreamble;
+    let preamble = Array.from({ length: sizePreamble }, (_v, i) => input[i]);
+    let i = sizePreamble;
     while (isSum(input[i], preamble)) {
         preamble.push(input[i]);
         preamble.shift();
@@ -25,13 +25,13 @@ const partOne = (input, sizePreamble) => {
 const partTwo = (input, sizePreamble) => {
     const invalidNumber = partOne(input, sizePreamble);
     const list = Array.from({ length: input.indexOf(invalidNumber) }, (_v, i) => input[i]);
-    var i = 0;
-    var sum = 0;
+    let i = 0;
+    let sum = 0;
     while (sum != invalidNumber) {
-        var bottom = list[i];
-        var top = list[i];
+        let bottom = list[i];
+        let top = list[i];
         sum = 0;
-        var j = i;
+        let j = i;
         while (sum < invalidNumber) {
             if (list[j] < bottom) {
                 bottom = list[j];
@@ -49,9 +49,9 @@ const partTwo = (input, sizePreamble) => {
 ['example9.txt', 'puzzle9.txt'].forEach((file) => {
     const input = fs.readFileSync(`../data/${file}`, 'utf-8').trim().split('\n').map(Number);
     if (file === 'example9.txt') {
-        var sizePreamble = 5;
+        let sizePreamble = 5;
     } else {
-        var sizePreamble = 25;
+        let sizePreamble = 25;
     }
     console.log(
         `Result of part one for ${file} : ` +

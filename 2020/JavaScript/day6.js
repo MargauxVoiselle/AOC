@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
@@ -41,7 +41,7 @@ const partTwo = (input) => {
         'y',
         'z',
     ];
-    var peoplePerGroup = input
+    let peoplePerGroup = input
         .map((list) => list.split(''))
         .map((list) => list.filter((char) => char === '\n').length + 1);
 

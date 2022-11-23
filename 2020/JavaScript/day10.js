@@ -1,16 +1,16 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
 const partOne = (input) => {
-    var currentJoltage = 0;
-    var i = 0;
-    var result = [0, 0];
+    let currentJoltage = 0;
+    let i = 0;
+    let result = [0, 0];
     while (input[i] - currentJoltage <= 3) {
         switch (input[i] - currentJoltage) {
             case 1:

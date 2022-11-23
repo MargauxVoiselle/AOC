@@ -1,9 +1,9 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
@@ -62,7 +62,7 @@ const validate = (list, requirements) => {
             if (!requirements.includes(key)) {
                 return false;
             } else {
-                var value = list[list.indexOf(key) + 1];
+                let value = list[list.indexOf(key) + 1];
                 return matchCriteria(key, value);
             }
         }).length == requirements.length

@@ -1,17 +1,17 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
 const partOne = (input) => {
     input = input.map((instruction) => [instruction.slice(0, 3), instruction.slice(4, 5), instruction.slice(5)]);
-    var executed = [];
-    var i = 0;
-    var result = 0;
+    let executed = [];
+    let i = 0;
+    let result = 0;
     while (!executed.includes(i)) {
         executed.push(i);
         switch (input[i][0]) {
@@ -40,10 +40,10 @@ const partOne = (input) => {
 
 const partTwo = (input) => {
     input = input.map((instruction) => [instruction.slice(0, 3), instruction.slice(4, 5), instruction.slice(5)]);
-    var j = 0;
-    var executed = [];
+    let j = 0;
+    let executed = [];
 
-    var possibleChange = [];
+    let possibleChange = [];
     for (const instruction of input) {
         if (instruction[0] === 'jmp' || instruction[0] == 'nop') {
             possibleChange.push(input.indexOf(instruction));
@@ -51,10 +51,10 @@ const partTwo = (input) => {
     }
 
     while (!executed.includes(input.length - 1)) {
-        var result = 0;
-        var i = 0;
+        let result = 0;
+        let i = 0;
         executed = [];
-        var toChange = possibleChange[j];
+        let toChange = possibleChange[j];
 
         while (!executed.includes(i) && i < input.length) {
             executed.push(i);

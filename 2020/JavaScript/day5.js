@@ -1,17 +1,17 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
 const determinateSeat = (input) => {
-    var currentSeatID;
+    let currentSeatID;
     return input.map((list) => {
-        var row = [0, 127];
-        var column = [0, 7];
+        let row = [0, 127];
+        let column = [0, 7];
         Array.from(list, (v, i) => {
             if (v === 'F') {
                 if (i === 6) {
@@ -48,7 +48,7 @@ const partOne = (input) => {
 };
 
 const partTwo = (input) => {
-    var seatID = determinateSeat(input);
+    let seatID = determinateSeat(input);
     return seatID.filter((x) => !seatID.includes(x + 1) && seatID.includes(x + 2))[0] + 1;
 };
 

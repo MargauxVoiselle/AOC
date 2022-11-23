@@ -1,14 +1,14 @@
 import * as fs from 'fs';
 
 const timer = (script, input) => {
-    var start = performance.now();
+    let start = performance.now();
     script(input);
-    var end = performance.now();
+    let end = performance.now();
     return (end - start).toFixed(2);
 };
 
 const move = (input, right, down) => {
-    var i = 0;
+    let i = 0;
     return input.filter((line) => {
         if (input.indexOf(line) === 0) {
             i += right;
