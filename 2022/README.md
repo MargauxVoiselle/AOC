@@ -6,7 +6,7 @@ Implémentation des solutions pour l'Advent Of Code 2022 par Margaux Voiselle.
 
 ## Jour 1
 
-Difficulté(s) :
-Apport(s) :
+-   Difficulté(s) :
+-   Apport(s) :
 
 ---
