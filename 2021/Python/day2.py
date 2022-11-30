@@ -6,8 +6,9 @@ Created on Thu Dec  2 07:06:39 2021
 @author: margaux
 """
 
-def first_solve():
-    name = '/Users/margaux/Documents/AdventofCode/2021/second_problem.txt'
+name = "../data/puzzle2.txt"
+
+def first_solve(name):
     with open(name, 'rb') as file:
         data = file.readlines()
         depth, horizontal = 0, 0
@@ -33,15 +34,12 @@ def first_solve():
                     if i not in {'d', 'o', 'w', 'n', ' ', '\n'}:
                         depth = depth+int(i)  
             
-    print(horizontal)
-    print(depth)
     print(horizontal*depth)
                 
 
-#first_solve()
+first_solve(name)
 
-def second_solve():
-    name = '/Users/margaux/Documents/AdventofCode/2021/second_problem.txt'
+def second_solve(name):
     with open(name, 'rb') as file:
         data = file.readlines()
         depth, horizontal, aim = 0, 0, 0
@@ -67,8 +65,6 @@ def second_solve():
                     if i not in {'d', 'o', 'w', 'n', ' ', '\n'}:
                         aim = aim+int(i)  
             
-    print(horizontal)
-    print(depth)
     print(horizontal*depth)
     
-second_solve()
+second_solve(name)

@@ -17,7 +17,7 @@ def part1(file):
 #         0 1 2 3 4 5 6 7 8 9
 digits = [6,2,5,5,4,5,6,3,7,6]
 
-entries = [l.strip() for l in open('problem_08.txt')]
+entries = [l.strip() for l in open("../data/puzzle8.txt")]
 
 sum_1478 = 0
 for e in entries:

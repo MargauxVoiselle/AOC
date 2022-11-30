@@ -39,4 +39,4 @@ def part1(name):
             bracket_count, crochet_count, curly_bracket_count, chevron_count = 0, 0, 0, 0
             print(illegal_char)
         
-part1('problem_10.txt')
+part1("../data/puzzle10.txt")

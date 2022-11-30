@@ -5,7 +5,7 @@ Created on Thu Dec  2 15:22:11 2021
 
 @author: margaux
 """
-name = '/Users/margaux/Documents/AdventofCode/2021/third_problem.txt'
+name = name = "../data/puzzle3.txt"
 def first_solve():
     with open(name, 'rb') as file:
         data = file.readlines()

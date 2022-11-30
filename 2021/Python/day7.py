@@ -27,7 +27,7 @@ def search(file, cost):
         fuel_list.append(total_fuel)
     print(min(fuel_list))
     
-file = 'problem_07.txt'
+file = "../data/puzzle7.txt"
 part1(file)
 part2(file)
     

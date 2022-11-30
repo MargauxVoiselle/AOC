@@ -42,7 +42,7 @@ def breeding(swarm, days):
 
 
 def first_solve(n):
-    name = '/Users/margaux/Documents/AdventofCode/2021/sixth_problem.txt'
+    name = "../data/puzzle6.txt"
     with open(name, 'rb') as file:
         data = file.read()
         list = []
