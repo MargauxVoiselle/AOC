@@ -6,7 +6,7 @@ Implémentation des solutions pour l'Advent Of Code 2022 par Margaux Voiselle.
 
 ## Jour 1
 
-- Objectif : Faire la somme des calories des aliments portés par chaque elfe et trouver l'elfe qui en porte le plus.
+- Objectif : Faire la somme des calories des aliments portés par chaque elfe et trouver l'elfe qui en porte le plus dans la première partie, les trois premiers elfes dans la seconde partie.
 - Exemple d'input :
 
 ```text
