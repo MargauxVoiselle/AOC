@@ -9,22 +9,13 @@ const timer = (script, input) => {
 
 const partOne = (input) => {
     let result = 0;
-    const score = { X: 1, Y: 2, Z: 3 };
+    const score = {
+        A: { X: 4, Y: 8, Z: 3 },
+        B: { X: 1, Y: 5, Z: 9 },
+        C: { X: 7, Y: 2, Z: 6 },
+    };
     for (let list of input) {
-        if (
-            (list[0] === 'A' && list[1] === 'X') ||
-            (list[0] === 'B' && list[1] === 'Y') ||
-            (list[0] === 'C' && list[1] === 'Z')
-        ) {
-            result += 3;
-        } else if (
-            (list[0] === 'C' && list[1] === 'X') ||
-            (list[0] === 'B' && list[1] === 'Z') ||
-            (list[0] === 'A' && list[1] === 'Y')
-        ) {
-            result += 6;
-        }
-        result += score[list[1]];
+        result += score[list[0]][list[1]];
     }
     return result;
 };
