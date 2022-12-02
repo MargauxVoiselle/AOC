@@ -31,10 +31,19 @@ Implémentation des solutions pour l'Advent Of Code 2022 par Margaux Voiselle.
 
 ---
 
-## Jour 2 (à venir)
+## Jour 2
 
-- Difficulté(s) :
-- Apport(s) :
+- Objectif : Calculer le score obtenu à la fin des différentes rencontres entre les elfes (sachant que A = pierre, B = feuille et C = ciseaux) avec les règles X = pierre, Y = feuille et Z = ciseaux pour la première partie et X = perdre, Y = égalité et Z = gagner pour la seconde partie.
+- Exemple d'input :
+
+```text
+A Y
+B X
+C Z
+```
+
+- Difficulté(s) : Rien à signaler
+- Apport(s) : Utilisation des dictionnaires pour éviter les multiples déclinaisons de cas (permet donc de raccourcir le code)
 
 ---
 
