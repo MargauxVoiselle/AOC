@@ -43,14 +43,26 @@ C Z
 ```
 
 - Difficulté(s) : Rien à signaler
-- Apport(s) : Utilisation des dictionnaires pour éviter les multiples déclinaisons de cas (permet donc de raccourcir le code)
+- Apport(s) : Utilisation des dictionnaires pour éviter les multiples déclinaisons de cas (permet donc de raccourcir le code).
 
 ---
 
-## Jour 3 (à venir)
+## Jour 3
 
-- Difficulté(s) :
-- Apport(s) :
+- Objectif : Repérer les répétitions d'item dans les différents compartiments (deux compartiments par sac) pour la première partie, dans les sacs des mêmes groupes d'elfes (3 elfes par groupe) dans la seconde partie.
+- Exemple d'input :
+
+```text
+vJrwpWtwJgWrhcsFMMfFFhFp
+jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL
+PmmdzqPrVvPwwTWBwg
+wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn
+ttgJtRGJQctTZtZT
+CrZsJsPPZsGzwwsLwLmpwMDw
+```
+
+- Difficulté(s) : Rien à signaler
+- Apport(s) : Utilisation des caractères ASCII et de leur code afin d'éviter l'utilisation d'un dictionnaire ou de multiples conditions inutiles ici.
 
 ---
 
