@@ -62,7 +62,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 ```
 
 - Difficulté(s) : Rien à signaler
-- Apport(s) : Utilisation des caractères ASCII et de leur code afin d'éviter l'utilisation d'un dictionnaire ou de multiples conditions inutiles ici.
+- Apport(s) : Utilisation des caractères ASCII et de leur code.
 
 ---
 
