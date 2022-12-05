@@ -85,10 +85,25 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 
 ---
 
-## Jour 5 (à venir)
+## Jour 5
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Déplacer les caisses de colonnes en colonnes selon les instructions données (Last In, First Out) sans maintenir l'ordre pour la première partie et en maintenant l'ordre lorsque plus de 2 caisses sont déplacées dans la seconde partie.
+- Exemple d'input :
+
+```text
+    [D]    
+[N] [C]    
+[Z] [M] [P]
+ 1   2   3 
+
+move 1 from 2 to 1
+move 3 from 1 to 3
+move 2 from 2 to 1
+move 1 from 1 to 2
+```
+
+- Difficulté(s) : Le parsage de la première partie des données étant plutôt complexe, j'ai préféré les rentrer à la main dans un dictionnaire pour différencier les données de l'example et du puzzle et donc gagner du temps. En revanche, des données plus grandes auraient nécessité une automatisation car les rentrer à la main aurait été trop fastidieux.
+- Remarque(s) : Rien de spécial.
 
 ---
 
