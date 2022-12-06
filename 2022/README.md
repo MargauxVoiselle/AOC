@@ -87,7 +87,7 @@ CrZsJsPPZsGzwwsLwLmpwMDw
 
 ## Jour 5
 
-- Objectif : Déplacer les caisses de colonnes en colonnes selon les instructions données (Last In, First Out) sans maintenir l'ordre pour la première partie et en maintenant l'ordre lorsque plus de 2 caisses sont déplacées dans la seconde partie.
+- Objectif : Déplacer les caisses de colonne en colonne selon les instructions données (Last In, First Out) sans maintenir l'ordre pour la première partie et en maintenant l'ordre lorsque plus de 2 caisses sont déplacées dans la seconde partie.
 - Exemple d'input :
 
 ```text
@@ -107,10 +107,17 @@ move 1 from 1 to 2
 
 ---
 
-## Jour 6 (à venir)
+## Jour 6
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver la première suite de 4 caractères différents dans la première partie, 14 caractères différents dans la seconde partie.
+- Exemple d'input :
+
+```text
+mjqjpqmgbljsphdztnvjfqwrcgsmlb
+```
+
+- Difficulté(s) : Rien à signaler
+- Remarque(s) : Utilisation des propriétés des ensembles pour trouver les éléments qui apparaissent plusieurs fois.
 
 ---
 
