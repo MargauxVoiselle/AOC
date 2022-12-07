@@ -121,10 +121,39 @@ mjqjpqmgbljsphdztnvjfqwrcgsmlb
 
 ---
 
-## Jour 7 (à venir)
+## Jour 7
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver la somme des tailles des répertoires dont la taille est inférieure à 100000 pour la première partie, la taille du plus petit des répertoires permettant d'obtenir une taille disponible de 30000000 pour la seconde partie.
+- Exemple d'input :
+
+```text
+$ cd /
+$ ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+$ cd a
+$ ls
+dir e
+29116 f
+2557 g
+62596 h.lst
+$ cd e
+$ ls
+584 i
+$ cd ..
+$ cd ..
+$ cd d
+$ ls
+4060174 j
+8033020 d.log
+5626152 d.ext
+7214296 k
+```
+
+- Difficulté(s) : J'ai perdu beaucoup de temps car j'étais partie du principe que les noms de répertoire étaient uniques ce qui m'a demandé de changer mon approche initiale en incluant des id.
+- Remarque(s) : Le niveau d'aujourd'hui était bien plus élevé que les jours précédents. L'utilisation de dictionnaire m'a permis de garder en mémoire pour chaque fichier ou répertoire son nom, son type, son id et l'id de son parent. Il fallait alors ensuite utiliser une fonction récursive pour trouver la taille de chaque répertoire.
 
 ---
 
