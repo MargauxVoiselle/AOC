@@ -157,10 +157,21 @@ $ ls
 
 ---
 
-## Jour 8 (à venir)
+## Jour 8
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le nombre d'arbres visibles depuis l'extérieur de la grille pour la première partie puis trouver l'arbre avec le score panoramique le plus élevé dans la seconde partie.
+- Exemple d'input :
+
+```text
+30373
+25512
+65332
+33549
+35390
+```
+
+- Difficulté(s) : Rien à signaler
+- Remarque(s) : J'ai perdu un petit peu de temps sur la deuxième partie avec les effets de bords si jamais l'arbre à l'extrémité était plus grand que celui d'où on se plaçait mais sinon rien de spécial.
 
 ---
 

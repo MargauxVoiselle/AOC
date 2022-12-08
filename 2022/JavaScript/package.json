@@ -13,7 +13,8 @@
         "day4": "node day4.js",
         "day5": "node day5.js",
         "day6": "node day6.js",
-        "day7": "node day7.js"
+        "day7": "node day7.js",
+        "day8": "node day8.js"
     },
     "devDependencies": {
         "eslint": "^8.27.0",
