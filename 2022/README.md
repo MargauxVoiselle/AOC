@@ -175,10 +175,24 @@ $ ls
 
 ---
 
-## Jour 9 (à venir)
+## Jour 9
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le nombre de positions différentes visitées par la queue de la corde ayant une longueur de 2 nœuds dans la première partie, 10 nœuds dans la seconde partie.
+- Exemple d'input :
+
+```text
+R 4
+U 4
+L 3
+D 1
+R 4
+D 1
+L 5
+R 2
+```
+
+- Difficulté(s) : J'ai eu des problèmes à supprimer les doublons d'indice dans la première partie lorsque je les stockais sous forme de tableau dans l'ensemble final.
+- Remarque(s) : J'ai pu résoudre le problème des doublons en les incluant dans des chaînes de caractère. Il a également été nécessaire que je change mon implémentation lors de la seconde partie car j'étais partie du principe que la queue prenait la position de la tête avant mouvement.
 
 ---
 
