@@ -196,10 +196,26 @@ R 2
 
 ---
 
-## Jour 10 (à venir)
+## Jour 10
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Suivre les instructions (addx met deux cycles à s'exécuter et ajoute au registre le paramètre donné et noop met un tour à s'exécuter mais ne fait rien) et trouver la somme des forces des signaux spécifié définies par le numéro du cycle multiplié par le registre associé pour la première partie, le message obtenu par le CRT dans la seconde partie.
+- Exemple d'input :
+
+```text
+addx 15
+addx -11
+addx 6
+addx -3
+addx 5
+addx -1
+addx -8
+addx 13
+addx 4
+noop
+```
+
+- Difficulté(s) : Rien à signaler.
+- Remarque(s) : Rien de spécial.
 
 ---
 
