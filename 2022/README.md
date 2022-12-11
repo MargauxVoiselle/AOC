@@ -240,7 +240,7 @@ Monkey 1:
     If false: throw to monkey 0
 ```
 
-- Difficulté(s) : Pour la seconde partie, il m'a été nécessaire d'aller me renseigner sur le théorème des restes chinois après avoir vu que les diviseurs étaient premiers entre eux car je n'arrivais pas à comprendre comment "garder les niveaux d'inquiétude gérables" tout en sachant que mon programme initial aboutissait sans gérer ces fameux niveaux. J'ai ainsi eu l'impression que l'énoncé d'aujourd'hui ne donnait pas suffisamment d'indices.
+- Difficulté(s) : J'ai eu l'impression que l'énoncé d'aujourd'hui ne donnait pas suffisamment d'indices pour la seconde partie et après de longues recherches, j'ai finalement vu qu'il fallait utiliser le théorème des restes chinois, les diviseurs étant premiers entre eux. En fait, je n'arrivais pas à comprendre comment "garder les niveaux d'inquiétude gérables".
 - Remarque(s) : Je pense que rentrer les seules données qui servaient à la main aurait été plus rapide mais j'ai quand même pris le temps de parser les données initiales avec des expressions régulières de manière à ce que mon programme puisse fonctionner avec d'autres données.
 
 ---
