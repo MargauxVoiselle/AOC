@@ -219,10 +219,29 @@ noop
 
 ---
 
-## Jour 11 (à venir)
+## Jour 11
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le niveau d'activité des singes après 20 tours dans la première partie et 10000 tours dans la seconde partie sachant qu'un niveau d'activité est défini par la multiplication des deux plus grands nombres de fois où les objets ont été inspectés par un singe.
+- Exemple d'input :
+
+```text
+Monkey 0:
+  Starting items: 79, 98
+  Operation: new = old * 19
+  Test: divisible by 23
+    If true: throw to monkey 2
+    If false: throw to monkey 3
+
+Monkey 1:
+  Starting items: 54, 65, 75, 74
+  Operation: new = old + 6
+  Test: divisible by 19
+    If true: throw to monkey 2
+    If false: throw to monkey 0
+```
+
+- Difficulté(s) : Pour la seconde partie, il m'a été nécessaire d'aller me renseigner sur le théorème des restes chinois après avoir vu que les diviseurs étaient premiers entre eux car je n'arrivais pas à comprendre comment "garder les niveaux d'inquiétude gérables" tout en sachant que mon programme initial aboutissait sans gérer ces fameux niveaux. J'ai ainsi eu l'impression que l'énoncé d'aujourd'hui ne donnait pas suffisamment d'indices.
+- Remarque(s) : Je pense que rentrer les seules données qui servaient à la main aurait été plus rapide mais j'ai quand même pris le temps de parser les données initiales avec des expressions régulières de manière à ce que mon programme puisse fonctionner avec d'autres données.
 
 ---
 
