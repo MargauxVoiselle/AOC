@@ -287,10 +287,26 @@ abdefghi
 
 ---
 
-## Jour 13 (à venir)
+## Jour 13
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver la somme des indices des paires de paquets bien ordonnées pour la première partie, ordonner les paquets en incluant les paquets [[2]], [[6]] et trouver la clé de décodage du signal d'alerte définie par le produit de leur indice dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+[1,1,3,1,1]
+[1,1,5,1,1]
+
+[[1],[2,3,4]]
+[[1],4]
+
+[9]
+[[8,7,6]]
+```
+
+- Difficulté(s) : L'utilisation de la fonciton eval() m'a facilité le parsing des données qui aurait été bien plus fastidieux sinon.
+
+- Remarque(s) : L'utilisation de la récursivité est la clé aujourd'hui de manière à pouvoir comparer quand il le faut les sous-listes.
 
 ---
 
