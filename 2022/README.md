@@ -304,7 +304,7 @@ abdefghi
 [[8,7,6]]
 ```
 
-- Difficulté(s) : L'utilisation de la fonciton eval() m'a facilité le parsing des données qui aurait été bien plus fastidieux sinon.
+- Difficulté(s) : L'utilisation de la fonction eval() m'a facilité le parsing des données qui aurait été bien plus fastidieux sinon.
 
 - Remarque(s) : L'utilisation de la récursivité est la clé aujourd'hui de manière à pouvoir comparer quand il le faut les sous-listes.
 
