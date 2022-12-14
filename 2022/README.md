@@ -310,10 +310,20 @@ abdefghi
 
 ---
 
-## Jour 14 (à venir)
+## Jour 14
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver la quantité de sable qui peut stagner dans la grotte, sans qu'il existe de sol dans la première partie et avec un sol s'étendant à l'infini dans la seconde partie sachant que des rochers sont présents dans la grotte selon les coordonnées données dans l'input.
+
+- Exemple d'input :
+
+```text
+498,4 -> 498,6 -> 496,6
+503,4 -> 502,4 -> 502,9 -> 494,9
+```
+
+- Difficulté(s) : Rien de spécial.
+
+- Remarque(s) : L'utilisation d'une table de hachage facilite le stockage des positions contenant un rocher ou un tas de sable.
 
 ---
 
