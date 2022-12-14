@@ -312,7 +312,7 @@ abdefghi
 
 ## Jour 14
 
-- Objectif : Trouver la quantité de sable qui peut stagner dans la grotte, sans qu'il existe de sol dans la première partie et avec un sol s'étendant à l'infini dans la seconde partie sachant que des rochers sont présents dans la grotte selon les coordonnées données dans l'input.
+- Objectif : Trouver la quantité de sable qui peut stagner dans la grotte, sans qu'il existe de sol dans la première partie et avec un sol s'étendant à l'infini dans la seconde partie, sachant que des rochers sont présents dans la grotte selon les coordonnées données dans l'input.
 
 - Exemple d'input :
 
