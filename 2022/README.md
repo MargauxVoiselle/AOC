@@ -327,10 +327,22 @@ abdefghi
 
 ---
 
-## Jour 15 (à venir)
+## Jour 15
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le nombre de positions sur une ligne donnée ne pouvant pas contenir de balise pour la première partie puis trouver la balise qui n'est détectée par aucun capteur dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+Sensor at x=2, y=18: closest beacon is at x=-2, y=15
+Sensor at x=9, y=16: closest beacon is at x=10, y=16
+Sensor at x=13, y=2: closest beacon is at x=15, y=3
+Sensor at x=12, y=14: closest beacon is at x=10, y=16
+```
+
+- Difficulté(s) : J'ai eu beaucoup de difficultés à me plonger dans la géométrie. Au début, j'ai foncé tête baissée sur une solution qui retenait la position de chaque balise et capteur et calculait au fur et à mesure le signal émis par chaque capteur ... En vain car cela s'est avéré fonctionner pour l'exemple de petite taille mais pas pour le puzzle car ce n'était juste plus calculable.
+
+- Remarque(s) : La solution de la seconde partie est basée sur le fait qu'il n'existe qu'un point sur tout ceux présents qui n'est pas capté par l'ensemble des capteurs et donc nécessairement ce point est collé au cercle de Mannhattan de l'un des capteurs. On teste alors toutes les possibilités jusqu'à trouver la bonne ...
 
 ---
 
