@@ -346,10 +346,21 @@ Sensor at x=12, y=14: closest beacon is at x=10, y=16
 
 ---
 
-## Jour 16 (à venir)
+## Jour 16 (non terminé)
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Pour la première partie, trouver le maximum de pression libérable en 30 minutes sachant qu'un déplacement et une ouverture de valve prennent une minute chacun.
+
+- Exemple d'input :
+
+```text
+Valve AA has flow rate=0; tunnels lead to valves DD, II, BB
+Valve BB has flow rate=13; tunnels lead to valves CC, AA
+Valve CC has flow rate=2; tunnels lead to valves DD, BB
+```
+
+- Difficulté(s) : Jour le plus compliqué et de loin ... J'ai passé de longues heures à coder des solutions qui finissaient par ne pas aboutir car trop longues.
+
+- Remarque(s) : Je n'ai pas trouvé de manière de réussir ce problème. La solution que j'ai implémenté fonctionne bien pour l'exemple donné mais pas pour le puzzle, tout du moins le programme ne peut pas terminer.
 
 ---
 
