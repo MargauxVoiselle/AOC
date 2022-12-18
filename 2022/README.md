@@ -380,10 +380,24 @@ Valve CC has flow rate=2; tunnels lead to valves DD, BB
 
 ---
 
-## Jour 18 (à venir)
+## Jour 18
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Calculer la surface totale balayée par la lave dans la première partie, la surface extérieure dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+2,2,2
+1,2,2
+3,2,2
+2,1,2
+2,3,2
+2,2,1
+```
+
+- Difficulté(s) : Ma première tentative sur la seconde partie a été de calculer la surface de la première partie et en retirant les cubes intérieurs possédant 6 voisins mais cela n'a évidemment pas fonctionné. Il m'a été nécessaire d'aller jeter un coup d'œil au principe de l'algorithme BFS sur le site [RedBlobGames](https://www.redblobgames.com/pathfinding/a-star/introduction.html) afin de réaliser la seconde partie.
+
+- Remarque(s) : La première partie était bien plus accessible que les problèmes des derniers jours. Pour la seconde partie, le principe est de partir d'un coin de la zone et de trouver toutes les positions accessibles depuis avec un algorithme BFS puis de soustraire à cette zone la surface intérieure.
 
 ---
 
