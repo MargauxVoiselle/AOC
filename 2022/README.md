@@ -364,10 +364,19 @@ Valve CC has flow rate=2; tunnels lead to valves DD, BB
 
 ---
 
-## Jour 17 (à venir)
+## Jour 17
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver la taille de la tour de rochers après la chute de 2022 rochers pour la première partie, 1000000000000 pour la seconde partie.
+
+- Exemple d'input :
+
+```text
+>>><<><>><<<>><>>><<<>>><<<><<<>><>><<>>
+```
+
+- Difficulté(s) : Il a été compliqué de trouver la bonne manière de repérer un cycle dans la seconde partie.
+
+- Remarque(s) : Un cycle est repérable lorsqu'on tombe sur deux états représentant la chute d'un rocher de même type, poussé dans la même direction avec les précédentes lignes des deux états identiques. Mon programme met tout de même une dizaine de seconde à s'exécuter lorsqu'il faut faire tomber les 1000000000000 rochers.
 
 ---
 
