@@ -401,10 +401,20 @@ Valve CC has flow rate=2; tunnels lead to valves DD, BB
 
 ---
 
-## Jour 19 (à venir)
+## Jour 19
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Déterminer le nombre maximum de géodes pouvant être produites en 24 minutes pour la première partie, 32 minutes pour la seconde partie (en considérant tous les plans dans la première partie et seulement les 3 premiers dans la seconde).
+
+- Exemple d'input :
+
+```text
+Blueprint 1: Each ore robot costs 4 ore. Each clay robot costs 2 ore. Each obsidian robot costs 3 ore and 14 clay. Each geode robot costs 2 ore and 7 obsidian.
+Blueprint 2: Each ore robot costs 2 ore. Each clay robot costs 3 ore. Each obsidian robot costs 3 ore and 8 clay. Each geode robot costs 3 ore and 12 obsidian.
+```
+
+- Difficulté(s) : J'ai trouvé qu'il était compliqué de trouver une manière d'aborder le problème de manière optimisée. Il était aussi facile de se perdre entre toutes les variables à gérer.
+
+- Remarque(s) : J'ai considéré qu'on produisait une géode (le matériau recherché) dès que c'était possible et qu'on arrêtait de produire un robot dès qu'on avait assez de son matériau nécessaire à la construction des autres robots en une minute.
 
 ---
 
