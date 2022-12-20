@@ -418,10 +418,25 @@ Blueprint 2: Each ore robot costs 2 ore. Each clay robot costs 3 ore. Each obsid
 
 ---
 
-## Jour 20 (à venir)
+## Jour 20
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Mixer la liste 1 fois dans la première partie, 10 fois dans la seconde partie en changeant l'entrée de départ à l'aide d'une clé de décryptage puis calculer la somme des 3 nombres qui forment les coordonnées recherchées.
+
+- Exemple d'input :
+
+```text
+1
+2
+-3
+3
+-2
+0
+4
+```
+
+- Difficulté(s) : Au début, j'étais partie du principe qu'il n'y avait pas de doublons dans les entrées étant donné que c'était le cas dans l'exemple donné ce qui m'a induit en erreur et m'a forcé à changer mon approche.
+
+- Remarque(s) : Rien de spécial.
 
 ---
 
