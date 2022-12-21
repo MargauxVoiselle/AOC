@@ -440,10 +440,33 @@ Blueprint 2: Each ore robot costs 2 ore. Each clay robot costs 3 ore. Each obsid
 
 ---
 
-## Jour 21 (à venir)
+## Jour 21
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Calculer le nombre qui sera crié par le singe "root" dans la première partie puis déterminer le nombre à crier de telle sorte que les deux cris reçus par "root" soient égaux dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+root: pppw + sjmn
+dbpl: 5
+cczh: sllz + lgvd
+zczc: 2
+ptdq: humn - dvpt
+dvpt: 3
+lfqf: 4
+humn: 5
+ljgn: 2
+sjmn: drzm * dbpl
+sllz: 4
+pppw: cczh / lfqf
+lgvd: ljgn * ptdq
+drzm: hmdt - zczc
+hmdt: 32
+```
+
+- Difficulté(s) : Rien à signaler pour la première partie. Pour la seconde partie, il m'a été nécessaire de trouver une manière de rétrécir l'intervalle de recherche puis d'effectuer une dichotomie dessus afin de permettre à l'algorithme de s'effectuer rapidement. J'ai donc utilisé le fait que l'un des cris reçu par "root" ne dépendait pas du nombre que nous devions chercher. Ensuite, j'ai calculé un intervalle dans lequel devait être compris notre nombre en me basant sur le moment où la différence entre le nombre crié indépendant de notre nombre et l'autre nombre crié, dépendant, changeait de signe.
+
+- Remarque(s) : La récursivité m'a permis de résoudre le problème vraiment rapidement.
 
 ---
 
