@@ -470,10 +470,31 @@ hmdt: 32
 
 ---
 
-## Jour 22 (à venir)
+## Jour 22
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le mot de passe résultant des déplacements donnés par les instructions sur l'entrée donnée telle quelle dans la première partie, sur l'entrée pliée pour former un cube dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+        ...#
+        .#..
+        #...
+        ....
+...#.......#
+........#...
+..#....#....
+..........#.
+        ...#....
+        .....#..
+        .#......
+        ......#.
+
+10R5L5R10L4R5L5
+```
+
+- Difficulté(s) : J'ai perdu énormément de temps à essayer de tout faire de tête sans m'aider d'un papier pour représenter le cube en 3D dans la seconde partie. C'était un programme extrêmement pénible à coder.
+- Remarque(s) : Mon algorithme ne fonctionne que pour l'exemple donné et pour mon puzzle et n'est malheureusement pas généralisable.
 
 ---
 
