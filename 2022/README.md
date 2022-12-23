@@ -498,10 +498,25 @@ hmdt: 32
 
 ---
 
-## Jour 23 (à venir)
+## Jour 23
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Simuler le déplacement des elfes et trouver le nombre d'emplacements vides à l'intérieur du plus petit rectangle contenant les elfes après 10 tours pour la première partie puis trouver au bout de combien de tours les elfes ne bougent plus dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+....#..
+..###.#
+#...#.#
+.#...##
+#.###..
+##.#.##
+.#..#..
+```
+
+- Difficulté(s) : Rien de particulier aujourd'hui avec mon choix de structures de données.
+
+- Remarque(s) : Il était juste nécessaire de bien m'y retrouver entre toutes les variables qui me servaient à définir les directions et les propositions.
 
 ---
 
