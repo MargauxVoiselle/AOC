@@ -101,7 +101,7 @@ const explore = (blizzards, start, end) => {
     let timer = 0;
     while (true) {
         timer++;
-        const futureOccupied = blizzards.map((row) => {
+        const explored = blizzards.map((row) => {
             let line = new Array();
             for (let i = 0; i < row.length; i++) {
                 line.push(false);
@@ -113,7 +113,7 @@ const explore = (blizzards, start, end) => {
             const nextPositions = getNext(blizzards, currentPosition);
             if (nextPositions.length !== 0) {
                 for (let nextPosition of nextPositions) {
-                    futureOccupied[nextPosition[0]][nextPosition[1]] = true;
+                    explored[nextPosition[0]][nextPosition[1]] = true;
                 }
             }
         }
@@ -121,7 +121,7 @@ const explore = (blizzards, start, end) => {
         for (let y = 0; y < blizzards.length; y++) {
             for (let x = 0; x < blizzards[0].length; x++) {
                 const current = [y, x];
-                if (futureOccupied[y][x]) {
+                if (explored[y][x]) {
                     if (arrived(current, end)) {
                         return {
                             timer,

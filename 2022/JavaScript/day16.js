@@ -7,6 +7,10 @@ const timer = (script, input) => {
     return (end - start).toFixed(2);
 };
 
+const toString = (number) => {
+    return number[0] + ',' + number[1];
+};
+
 class PriorityQueueElement {
     constructor(value, distance) {
         this.value = value;
@@ -49,84 +53,101 @@ const parse = (input) => {
     return map;
 };
 
-const findPath = (map, reducedMap, length) => {
-    let path = new Map().set(30, [['AA'], 0]);
-    for (let count = 0; count < length; count++) {
-        for (let [_, possibility] of path) {
-            let lastValve = reducedMap.find((valve) => valve.id === possibility[0][possibility[0].length - 1]);
-            for (let next of lastValve.next) {
-                if (possibility[0].includes(next)) continue;
-                let [flow, timeLeft] = calculateFlow([[...possibility[0]].flat(), next].flat(), map);
-                if (timeLeft < 0) {
-                    continue;
-                }
-
-                if (path.has(timeLeft)) {
-                    let current = path.get(timeLeft);
-                    if (current[1] < flow) path.set(timeLeft, [[[...possibility[0]].flat(), next].flat(), flow]);
-                } else {
-                    path.set(timeLeft, [[[...possibility[0]].flat(), next].flat(), flow]);
-                }
-            }
-        }
-    }
-    return path;
-};
-
-const shortestDistance = (map, start, end) => {
+const shortestDistance = (valves, distances, start, end) => {
+    if (distances.has(toString([start, end]))) return distances.get(toString([start, end]));
     const path = new PriorityQueue();
-    start = map.find((valve) => valve.id === start);
-    end = map.find((valve) => valve.id === end);
-    path.put(start, 0);
+    let startValve = valves.find((valve) => valve.id === start);
+    let endValve = valves.find((valve) => valve.id === end);
+    const seen = new Set();
+    path.put(startValve, 0);
     while (!path.isEmpty()) {
         let current = path.get();
-        if (current.value.id === end.id) return current.distance;
+        if (current.value.id === endValve.id) {
+            distances.set(toString([start, end]), current.distance);
+            return current.distance;
+        }
         for (const nextId of current.value.next) {
-            let next = map.find((valve) => valve.id === nextId);
+            if (seen.has(nextId)) continue;
+            seen.add(nextId);
+            let next = valves.find((valve) => valve.id === nextId);
             path.put(next, current.distance + 1);
         }
     }
 };
 
-const calculateFlow = (path, map) => {
-    let timeLeft = 30;
+const nextOptimalValve = (valves, distances, current, timeLeft, significantValves) => {
+    let optimalValve = null;
     let flow = 0;
-    for (let i = 0; i < path.length; i++) {
-        if (timeLeft <= 0) {
-            return flow;
-        }
-        if (map.find((v) => v.id === path[i]).rate === 0) {
-            timeLeft -= shortestDistance(map, path[i], path[i + 1]);
-        } else if (i === path.length - 1) {
-            timeLeft--;
-            flow += map.find((v) => v.id === path[i]).rate * timeLeft;
-        } else {
-            timeLeft--;
-            flow += map.find((v) => v.id === path[i]).rate * timeLeft;
-            timeLeft -= shortestDistance(map, path[i], path[i + 1]);
+    for (let valve of significantValves) {
+        let newSignificantValves = [...significantValves].filter((v) => v !== valve);
+        let newTime = timeLeft - shortestDistance(valves, distances, current, valve) - 1;
+        if (newTime <= 0) continue;
+        let newFlow = newTime * valves.find((v) => v.id === valve).rate;
+        let optimal = nextOptimalValve(valves, distances, valve, newTime, newSignificantValves);
+        newFlow += optimal.flow;
+
+        if (newFlow > flow) {
+            optimalValve = valve;
+            flow = newFlow;
         }
     }
-
-    return [flow, timeLeft];
+    return { optimalValve, flow };
 };
 
 const partOne = (input) => {
-    const map = parse(input);
-    const importantValves = map.filter((valve) => valve.rate !== 0).map((valve) => valve.id);
-    const reducedMap = [{ id: 'AA', rate: 0, next: importantValves }];
-    for (let i = 0; i < importantValves.length; i++) {
-        reducedMap.push({
-            id: importantValves[i],
-            rate: map.find((valve) => valve.id === importantValves[i]).rate,
-            next: importantValves.filter((valve) => valve != importantValves[i]),
-        });
+    const valves = parse(input);
+    const distances = new Map();
+    const significantValves = valves.filter((valve) => valve.rate !== 0).map((valve) => valve.id);
+    return nextOptimalValve(valves, distances, 'AA', 30, significantValves).flow;
+};
+
+const calculateDistance = (valves, myValves, elephantValves) => {
+    let distance = 0;
+    let distances = new Map();
+    for (let i = 0; i < myValves.length; i++) {
+        for (let j = i + 1; j < myValves.length; j++) {
+            distance += shortestDistance(valves, distances, myValves[i], myValves[j]);
+        }
     }
-    const pathPossible = findPath(map, reducedMap, reducedMap.length - 1);
-    let max = 0;
-    for (let [_, possibility] of pathPossible) {
-        max = Math.max(max, possibility[1]);
+    distances = new Map();
+    for (let i = 0; i < elephantValves.length; i++) {
+        for (let j = i + 1; j < elephantValves.length; j++) {
+            distance += shortestDistance(valves, distances, elephantValves[i], elephantValves[j]);
+        }
     }
-    return max;
+    return distance;
+};
+
+const split = (significantValves, valves) => {
+    let distance = 99999999;
+    let myValves = [];
+    let elephantValves = [];
+    for (let i = 0; i < 100000; i++) {
+        let elephantValvesTest = [];
+        let myValvesTest = [];
+        for (let significantValve of significantValves) {
+            if (Math.random() > 0.5) myValvesTest.push(significantValve);
+            else elephantValvesTest.push(significantValve);
+        }
+        let newDistance = calculateDistance(valves, myValvesTest, elephantValvesTest);
+        if (newDistance < distance) {
+            distance = newDistance;
+            myValves = myValvesTest;
+            elephantValves = elephantValvesTest;
+        }
+    }
+    return { myValves, elephantValves };
+};
+
+const partTwo = (input) => {
+    const valves = parse(input);
+    const distances = new Map();
+    const significantValves = valves.filter((valve) => valve.rate !== 0).map((valve) => valve.id);
+    const { myValves, elephantValves } = split(significantValves, valves);
+    return (
+        nextOptimalValve(valves, distances, 'AA', 26, myValves).flow +
+        nextOptimalValve(valves, distances, 'AA', 26, elephantValves).flow
+    );
 };
 
 ['example16.txt', 'puzzle16.txt'].forEach((file) => {
@@ -144,4 +165,5 @@ const partOne = (input) => {
         )
         .map((line) => line.split(' '));
     console.log(`Result of part one for ${file} : ` + partOne(input) + ` (executed in ${timer(partOne, input)} ms)`);
+    console.log(`Result of part two for ${file} : ` + partTwo(input) + ` (executed in ${timer(partTwo, input)} ms)`);
 });

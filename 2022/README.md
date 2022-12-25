@@ -346,9 +346,9 @@ Sensor at x=12, y=14: closest beacon is at x=10, y=16
 
 ---
 
-## Jour 16 (non terminé)
+## Jour 16
 
-- Objectif : Pour la première partie, trouver le maximum de pression libérable en 30 minutes sachant qu'un déplacement et une ouverture de valve prennent une minute chacun.
+- Objectif : Pour la première partie, trouver le maximum de pression libérable en 30 minutes sachant qu'un déplacement et une ouverture de valve prennent une minute chacun. Pour la seconde partie, trouver le maximum de pression libérable en 26 minutes sachant qu'un éléphant nous aide et fait la même chose que nous.
 
 - Exemple d'input :
 
@@ -360,7 +360,7 @@ Valve CC has flow rate=2; tunnels lead to valves DD, BB
 
 - Difficulté(s) : Jour le plus compliqué et de loin ... J'ai passé de longues heures à coder des solutions qui finissaient par ne pas aboutir car trop longues.
 
-- Remarque(s) : Je n'ai pas trouvé de manière de réussir ce problème. La solution que j'ai implémenté fonctionne bien pour l'exemple donné mais pas pour le puzzle, tout du moins le programme ne peut pas terminer.
+- Remarque(s) : Je n'ai pas trouvé de manière de réussir ce problème. La solution que j'ai implémenté fonctionne bien pour l'exemple donné mais pas pour le puzzle, tout du moins le programme ne peut pas terminer. EDIT : Il ne manquait que l'utilisation d'une table de hachage afin de garder les valves déjà visitées en mémoire pour que mon programme termine pour le puzzle. Pour la partie 2, le chemin emprunté par l'éléphant étant complètement indépendant du nôtre, une des solutions possibles s'est avérée être de simuler un très grand nombre de répartition des valves entre l'éléphant et nous, de garder la meilleure puis d'appliquer le précédent programme à chaque partie.
 
 ---
 
@@ -520,16 +520,61 @@ hmdt: 32
 
 ---
 
-## Jour 24 (à venir)
+## Jour 24
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Trouver le temps le plus court permettant d'atteindre l'objectif tout en évitant les blizzards pour la première partie, d'atteindre l'objectif, de revenir puis de repartir dans la seconde partie.
+
+- Exemple d'input :
+
+```text
+#.#####
+#.....#
+#>....#
+#.....#
+#...v.#
+#.....#
+#####.#
+```
+
+- Difficulté(s) : Rien à signaler.
+
+- Remarque(s) : Il fallait bien faire attention aux effets de bord et prendre en compte le fait qu'on pouvait rester sur place en attendant que les blizzards se déplacent.
 
 ---
 
-## Jour 25 (à venir)
+## Jour 25
 
-- Difficulté(s) :
-- Remarque(s) :
+- Objectif : Faire la somme sous forme décimale des nombres sous la représentation SNAFU puis repasser le résultat en représentation SNAFU (sachant qu'on est en base 5 et que '=' = -2, '-' = -1, '0' = 0, '1' = 1 et '2' = 2).
+
+- Exemple d'input :
+
+```text
+1=-0-2
+12111
+2=0=
+21
+2=01
+111
+20012
+112
+1=-1=
+1-12
+12
+1=
+122
+```
+
+- Difficulté(s) : Rien de spécial.
+
+- Remarque(s) : Un bon dernier challenge pour terminer ce calendrier de l'avent !
 
 ---
+
+## Conclusion
+
+Ce mois de décembre aura été riche en découverte. J'ai beaucoup apprécié travailler en JavaScript même si ça n'était pas le cas au début, comme lorsqu'on apprend n'importe quel nouveau langage.
+
+Ça n'a pas toujours été facile, c'était même parfois impossible pour moi de terminer les challenges le jour-même (la fatigue était bien présente et la difficulté des challenges étant variables d'un jour à l'autre) mais j'ai beaucoup appris, que ce soit en parsing ou en structures de données (les tables de hachages se sont révélées maintes fois très utiles).
+Cet Advent Of Code m'aura également permis de découvrir de nouveaux algorithmes avec de nouvelles idées (merci [Reddit](https://www.reddit.com/search/?q=advent%20of%20code) et [RedBlobGames](https://www.redblobgames.com/pathfinding/a-star/introduction.html)).
+
+En somme, j'ai vécu une expérience très enrichissante mais aussi stressante. Et enfin ... peut-être à l'année prochaine !
