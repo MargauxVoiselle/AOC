@@ -360,7 +360,7 @@ Valve CC has flow rate=2; tunnels lead to valves DD, BB
 
 - Difficulté(s) : Jour le plus compliqué et de loin ... J'ai passé de longues heures à coder des solutions qui finissaient par ne pas aboutir car trop longues.
 
-- Remarque(s) : Je n'ai pas trouvé de manière de réussir ce problème. La solution que j'ai implémenté fonctionne bien pour l'exemple donné mais pas pour le puzzle, tout du moins le programme ne peut pas terminer. EDIT : Il ne manquait que l'utilisation d'une table de hachage afin de garder les valves déjà visitées en mémoire pour que mon programme termine pour le puzzle. Pour la partie 2, le chemin emprunté par l'éléphant étant complètement indépendant du nôtre, une des solutions possibles s'est avérée être de simuler un très grand nombre de répartition des valves entre l'éléphant et nous, de garder la meilleure puis d'appliquer le précédent programme à chaque partie.
+- Remarque(s) : Je n'ai pas trouvé de manière de réussir ce problème. La solution que j'ai implémenté fonctionne bien pour l'exemple donné mais pas pour le puzzle, tout du moins le programme ne peut pas terminer. EDIT : Après de longues heures à chercher une manière de débloquer mon programme avec l'étude d'autres solutions, je me suis rendue compte qu'il ne manquait que l'utilisation d'une table de hachage afin de garder les valves déjà visitées en mémoire pour que mon programme termine pour le puzzle. Pour la partie 2, le chemin emprunté par l'éléphant étant complètement indépendant du nôtre, une des solutions possibles s'est avérée être de simuler un très grand nombre de répartition des valves entre l'éléphant et nous, de garder la meilleure puis d'appliquer le précédent programme à chaque partie.
 
 ---
 
@@ -536,7 +536,7 @@ hmdt: 32
 #####.#
 ```
 
-- Difficulté(s) : Rien à signaler.
+- Difficulté(s) : Mon programme initial ne renvoyait pas la bonne solution sur la partie 2 alors qu'il suffisait seulement de faire appel au code de la première partie 3 fois avec des positions initiales et finales différentes (tout en retenant la carte des blizzards). Après de longues heures perdues à chercher l'origine du problème sans la trouver, j'ai cherché une autre solution en m'inspirant de la résolution du problème par d'autres personnes (qui ressemblait pourtant fortement à la mienne).
 
 - Remarque(s) : Il fallait bien faire attention aux effets de bord et prendre en compte le fait qu'on pouvait rester sur place en attendant que les blizzards se déplacent.
 
@@ -564,7 +564,7 @@ hmdt: 32
 122
 ```
 
-- Difficulté(s) : Rien de spécial.
+- Difficulté(s) : Le passage décimal à SNAFU n'était pas tout à fait naturel mais cela se faisait quand même bien.
 
 - Remarque(s) : Un bon dernier challenge pour terminer ce calendrier de l'avent !
 
@@ -574,7 +574,7 @@ hmdt: 32
 
 Ce mois de décembre aura été riche en découverte. J'ai beaucoup apprécié travailler en JavaScript même si ça n'était pas le cas au début, comme lorsqu'on apprend n'importe quel nouveau langage.
 
-Ça n'a pas toujours été facile, c'était même parfois impossible pour moi de terminer les challenges le jour-même (la fatigue était bien présente et la difficulté des challenges étant variables d'un jour à l'autre) mais j'ai beaucoup appris, que ce soit en parsing ou en structures de données (les tables de hachages se sont révélées maintes fois très utiles).
+Ça n'a pas toujours été facile, c'était même parfois impossible pour moi de terminer les challenges le jour-même (la fatigue était bien présente et la difficulté des challenges étant variables d'un jour à l'autre) mais j'ai beaucoup appris, que ce soit en parsing ou en structures de données (les tables de hachages se sont révélées maintes fois très utiles), par moi-même, avec des recherches plus ou moins poussées ou avec l'étude d'autres solutions.
 Cet Advent Of Code m'aura également permis de découvrir de nouveaux algorithmes avec de nouvelles idées (merci [Reddit](https://www.reddit.com/search/?q=advent%20of%20code) et [RedBlobGames](https://www.redblobgames.com/pathfinding/a-star/introduction.html)).
 
 En somme, j'ai vécu une expérience très enrichissante mais aussi stressante. Et enfin ... peut-être à l'année prochaine !
